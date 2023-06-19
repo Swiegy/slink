@@ -1,0 +1,11 @@
+version: '3'
+services:
+  backend:
+    image: slink/backend
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:${SLINK_BACKEND_PORT:-8000}"
+    # volumes:
+    #   - .:/app
